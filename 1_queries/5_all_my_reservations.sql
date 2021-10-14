@@ -7,3 +7,9 @@ AND reservations.end_date < now()::date
 GROUP BY properties.id, reservations.id
 ORDER BY reservations.start_date
 LIMIT 10;
+
+-- FROM reservations
+-- JOIN property_reviews ON reservations.id = property_reviews.reservation_id
+-- JOIN properties ON properties.id = property_reviews.property_id
+
+-- properties.*, reservations.*, avg(rating) as average_rating
